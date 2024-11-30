@@ -1,0 +1,145 @@
+.hero {
+    text-align: center;
+    display: flex;                          /* utilizes flex box*/
+    flex-direction: column;                 /* changes the main axis to the y axis, making the distribution of the elements along the y axis*/
+    justify-content: center;                /* centers the images along the main/y axis */
+    align-items: center;                    /* centers the images along the cross/x axis */
+    gap: 1rem;                              /* adds spaces between the elements inside the hero class */
+    margin-top: 2rem;                       /* adds space between the hero section and the header*/
+
+    background-image: url('/images/img-hero-bg/front-page.jpg');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    padding: 5rem 0;
+}
+
+.hero__logo {
+    border: 1px solid hsl(0, 0%, 50%);
+    border-radius: 100px;                     /* circles out the logo img */
+    width: 7rem;                            /* sets the width and height of the img */
+    height: 7rem;
+}
+
+.hero__subtitle {
+    color: white;             /* sets the color of the text inside the subtitle class */
+    font-size: var(--size-xs);            /* sets the size of the text inside the subtitle class */
+    line-height: 0.9;      
+    text-shadow: 1px 1px black, -1px -1px black;              
+}
+
+.hero__title {
+    text-shadow: 3px 3px rgb(62, 0, 0);
+
+    color: white;
+    text-transform: uppercasefonts;
+    font-size: var(--size-3xl);
+    letter-spacing: -0.05em;
+    line-height: 0.9;
+    
+    /* background-color: rgba(7, 10, 19, 0.25); */
+    padding: 0.75rem;
+    border-radius: 25px;
+}
+
+.hero__btn {
+    text-transform: capitalize;
+    font-size: var(--size-sm);
+    margin-bottom: 0.5rem;
+}
+
+/* xs */
+@media (min-width: 475px) {
+    .hero {              /* centers the images along the cross/x axis */
+        gap: 1.5rem;                              /* adds spaces between the elements inside the hero class */
+    }
+
+    .hero__logo {            /* circles out the logo img */
+        width: 9rem;                            /* sets the width and height of the img */
+        height: 9rem;
+    }
+    
+    
+    .hero__subtitle {
+        font-size: var(--size-lg);
+    }
+    
+    .hero__title {
+        font-size: var(--size-4xl);
+    }
+    
+    .hero__description {
+        font-size: var(--size-base);
+    }
+    
+    .hero__btn {
+        font-size: var(--size-base);
+    }
+}
+ 
+/* sm */
+/* @media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+} */
+
+/* md */
+@media (min-width: 768px) {
+    
+    .hero__logo {            /* circles out the logo img */
+        width: 12rem;                            /* sets the width and height of the img */
+        height: 12rem;
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    
+    .hero__subtitle {
+        font-size: var(--size-2xl);
+    }
+    
+    .hero__title {
+        font-size: var(--size-7xl);
+    }
+    
+    .hero__description {
+        font-size: var(--size-lg);
+    }
+    
+    .hero__btn {
+        font-size: var(--size-lg);
+    }
+}
+
+
+/* xl */
+@media (min-width: 1280px) {
+    .hero {
+        gap: 2rem;
+    }
+    
+    .hero__subtitle {
+        font-size: var(--size-3xl);
+    }
+    
+    .hero__title {
+        font-size: var(--size-8xl);
+    }
+    
+    .hero__description {
+        font-size: var(--size-xl);
+    }
+    
+    .hero__btn {
+        font-size: var(--size-xl);
+    }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}  */

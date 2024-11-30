@@ -1,0 +1,285 @@
+.membership {
+    text-align: center;
+}
+
+.membership__title {
+    font-size: var(--size-2xl);
+    color: var(--clr-light);
+}
+
+.membership__description {
+    max-width: 60ch;
+    font-size: var(--size-sm);
+    color: var(--clr-slate600);
+    margin: 1rem auto;
+}
+
+.membership__project-title {
+    font-size: var(--size-base);
+    margin-bottom: 1rem;
+}
+
+.membership__img-wrapper {
+    position: relative;                 /* sets the featured_img-wrapper as the closest element for the position:absolute on the ::after */
+                                        /* makes the background color relative to the wrapper rather than the document */
+}
+
+.membership__img-wrapper img {
+    aspect-ratio: 5/3;
+}
+
+.membership__img-wrapper::after {
+    content: '';
+    background-color: rgba(79, 70, 229, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+
+.membership__img-wrapper:hover::after {
+    background-color: rgba(79, 70, 229, 0.3);
+}
+
+.membership__project:not(:last-child) {               /* adds the styles to all membership__project classes but not to the last child*/
+    margin-bottom: 5rem;
+}
+
+.membership__project-description1 {
+    font-size: var(--size-sm);
+    color: var(--clr-slate400);
+    margin: 1rem;
+}
+
+.membership__project-description2 {
+    font-size: var(--size-sm);
+    color: var(--clr-slate400);
+    margin-bottom: 1rem;
+}
+
+.membership__project-description3 {
+    font-size: var(--size-sm);
+    color: var(--clr-slate400);
+    margin-bottom: 1rem;
+}
+
+.membership__project-btn {
+    font-size: var(--size-sm);
+    margin-bottom: 1rem;
+}
+
+.membership__project-subtitle {
+    margin-top: 1rem;
+    display: none;
+}
+
+/* xs */
+@media (min-width: 475px) {
+    .membership__title {
+        font-size: var(--size-3xl);
+    }
+    
+    .membership__description {
+        font-size: var(--size-base);
+        margin: 1.5rem auto;
+    }
+
+    .membership__project-title {
+        font-size: var(--size-lg);
+        margin-bottom: 1.5rem;
+    }
+
+    .membership__project-description1 {
+        font-size: var(--size-base);
+        margin: 1.5rem 0;
+    }
+    
+    .membership__project-description2 {
+        font-size: var(--size-base);
+        margin-bottom: 1.5rem;
+    }
+    
+    .membership__project-description3 {
+        font-size: var(--size-base);
+        margin-bottom: 1.5rem;
+    }
+    
+    .membership__project-btn {
+        font-size: var(--size-base);
+    }
+}
+ 
+/* sm */
+@media (min-width: 640px) {                         /* Beginning of grid display */
+    .membership__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:                    /* arranges grid areas */
+        'image1 content1'
+        'content2 image2'
+        'image3 content3';
+        place-items: center;
+    }
+
+    .membership__image1 {                             /* assigns image and content classes to their respective grid areas*/
+        grid-area: image1;
+    }
+
+    .membership__image2 {
+        grid-area: image2;
+    }
+    
+    .membership__image3 {
+        grid-area: image3;
+    }
+
+    .membership__content1 {
+        grid-area: content1;
+    }
+    
+    .membership__content2 {
+        grid-area: content2;
+    }
+    
+    .membership__content3 {
+        grid-area: content3;
+    }
+
+    .membership__project {
+        padding: 0 1rem ;
+    }
+
+    .membership__project-title
+    {
+        display: none;
+    }
+
+    .membership__project-description1 {
+        font-size: var(--size-xs);
+        margin: 1em 0;
+    }
+    
+    .membership__project-description2 {
+        font-size: var(--size-xs);
+        margin-bottom: 1em;
+    }
+    
+    .membership__project-description3 {
+        font-size: var(--size-xs);
+        margin-bottom: 1em;
+    }
+    
+    .membership__project-btn {
+        font-size: var(--size-xs);
+    }
+
+    .membership__project:not(:last-child) {               /* adds the styles to all membership__project classes but not to the last child*/
+        margin-bottom: 0;
+    }
+
+    .membership__project-subtitle {
+        display: block;
+        font-size: var(--size-base);
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    .membership__project-description1 {
+        font-size: var(--size-sm); 
+    }
+   
+    .membership__project-description2 {
+        font-size: var(--size-sm);
+    }
+   
+    .membership__project-description3 {
+        font-size: var(--size-sm);
+    }
+    
+    .membership__project-btn {
+        font-size: var(--size-sm);
+    }
+
+    .membership__project-subtitle {
+        font-size: var(--size-lg);
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    .membership__title {
+        font-size: var(--size-4xl);
+    }
+    
+    .membership__description {
+        font-size: var(--size-lg);
+    }
+
+    .membership__project-description1 {
+        font-size: var(--size-base); 
+    }
+   
+    .membership__project-description2 {
+        font-size: var(--size-base);
+    }
+   
+    .membership__project-description3 {
+        font-size: var(--size-base);
+    }
+    
+    .membership__project-btn {
+        font-size: var(--size-base);
+    }
+
+    .membership__project-subtitle {
+        font-size: var(--size-xl);
+    }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    .membership__title {
+        font-size: var(--size-5xl);
+    }
+    
+    .membership__description {
+        font-size: var(--size-xl);
+        margin: 2rem auto;
+    }
+
+    .membership__project-description1 {
+        font-size: var(--size-xl); 
+    }
+    
+    .membership__project-description2 {
+        font-size: var(--size-xl);
+    }
+    
+    .membership__project-description3 {
+        font-size: var(--size-xl);
+    }
+    
+    .membership__project-btn {
+        font-size: var(--size-xl);
+    }
+
+    .membership__project-subtitle {
+        font-size: var(--size-2xl);
+    }
+
+    .membership__container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+    .membership__container {
+        width: 70%;
+    }
+} 
