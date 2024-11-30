@@ -101,9 +101,11 @@ img.displaySlide{
 }
 
 /* md */
-/* @media (min-width: 768px) {
-
-} */
+@media (min-width: 768px) {
+    .slider {
+        width: 80%;
+    }
+}
 
 /* lg */
 @media (min-width: 1024px) {
@@ -132,6 +134,10 @@ img.displaySlide{
 
     .slider__description {
         font-size: var(--size-xl);
+    }
+
+    .slider {
+        width: 70%;
     }
 }
 
