@@ -10,6 +10,7 @@
     background-image: url('/images/img-hero-bg/front-page.jpg');
     background-repeat: no-repeat;
     background-attachment: local;
+    background-position: center;
     background-size: cover;
     padding: 5rem 0;
 }
